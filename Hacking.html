@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقلب اختراق الهاتف</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #message {
+            font-size: 20px;
+            margin-top: 50px;
+        }
+        #content {
+            display: none;
+        }
+        .blackout {
+            background-color: #000;
+            color: red;
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>تم فتح الموقع الجغرافي</h1>
+    <div id="message">
+        <p>فتح الموقع الآن...</p>
+    </div>
+    <div id="content">
+        <div class="blackout">⚠️ اختراق النظام جاري...</div>
+        <div class="blackout">📡 الاتصال بالخادم المظلم...</div>
+        <div class="blackout">🔍 البحث عن البيانات الحساسة...</div>
+        <div class="blackout">💀 الهاتف سيتم تدميره الآن!</div>
+        <div class="blackout">🚨 الهاتف مُغلق بالكامل! إعادة التشغيل إجبارية! 💀</div>
+    </div>
+
+    <script>
+        // فتح الرابط الجغرافي
+        window.open('https://maps.app.goo.gl/C1cKzMudgNUEE2S1A', '_blank');
+        
+        // بعد 30 ثانية، بدء المقلب
+        setTimeout(function() {
+            // إخفاء الرسالة الأولى
+            document.getElementById('message').style.display = 'none';
+            
+            // عرض المقلب بعد 30 ثانية
+            document.getElementById('content').style.display = 'block';
+            
+            // تأثير لإغلاق الشاشة بعد 10 ثواني
+            setTimeout(function() {
+                document.body.style.backgroundColor = 'black';
+                document.body.innerHTML = "<h1 style='color:red;'>🚨 الجهاز يعيد التشغيل...</h1>";
+            }, 10000);
+        }, 30000);
+    </script>
+
+</body></html>
